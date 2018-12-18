@@ -1,4 +1,4 @@
-## Type Check Utils
+## Type Checkers
 
 Numbers:
 ```js
@@ -7,6 +7,10 @@ const isNumber = (val) => typeof val === 'number';
 Strings:
 ```js
 const isString = val => typeof val === 'string' || val instanceof String;
+```
+Bools:
+```js
+const isBool = val => typeof val === 'boolean';
 ```
 Function:
 ```js
