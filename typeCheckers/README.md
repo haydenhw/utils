@@ -2,7 +2,7 @@
 
 Numbers:
 ```js
-const isNumber = (val) => typeof val === 'number';
+const isNumber = val => typeof val === 'number';
 ```
 Strings:
 ```js
@@ -14,7 +14,7 @@ const isBool = val => typeof val === 'boolean';
 ```
 Function:
 ```js
-const isFunc = (val) => typeof val === 'function';
+const isFunc = val => typeof val === 'function';
 ```
 Arrays:
 ```js
