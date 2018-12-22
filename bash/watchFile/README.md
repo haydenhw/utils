@@ -2,6 +2,6 @@ Executes up to four commands when specified file is saved
 
 Example:
 
-```console
+```sh
 watchFile hello.java 'javac hello.java' 'java hello'
 ```
