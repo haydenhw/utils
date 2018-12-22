@@ -1,6 +1,6 @@
 Executes up to four commands when specified file is saved
 
-watchFile "<fileToWatch> <command1> <command2> <command3> <command4>"
+watchFile $ltfileToWatch$gt $ltcommand1$gt $ltcommand2$gt $ltcommand3$gt $ltcommand4$gt
 
 Example:
 
