@@ -2,7 +2,8 @@
 
 while inotifywait -e close_write $1;
   do
-    printf "\n\n"
-    $2 && $3 && $4 && $5
+    clear;
+    printf "\n\n";
+    $2 && $3 && $4 && $5;
     printf "\n\n";
   done
