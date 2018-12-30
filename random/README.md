@@ -1,6 +1,5 @@
 ## Random Numbers
 
-Numbers:
 ```js
 const getRandomNumber = (min, max) => (
   Math.random() * (max - min) + min
