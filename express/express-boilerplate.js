@@ -2,7 +2,6 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const environmentState = require('./data/mockDataEnvironment');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -10,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static('dist'));
+app.use(express.static('public'));
 
 app.get('/environment', (req, res) => {
   // query environmnet state from Mongo
