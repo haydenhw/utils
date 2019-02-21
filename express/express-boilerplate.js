@@ -1,4 +1,4 @@
-// TODO: save this to github
+// yarn add express cors body-parser
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -11,10 +11,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-app.get('/environment', (req, res) => {
-  // query environmnet state from Mongo
-
-  res.json(environmentState);
+app.get('/', (req, res) => {
+  res.json({ message: "Hola Mundo!" });
 });
 
-app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
