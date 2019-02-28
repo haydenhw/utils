@@ -1,4 +1,4 @@
-const stories = require('./lq_stories');
+const stories = require('./' + process.argv[2]);
 
 const collectStories = (stories) => {
     const titles = [];
@@ -17,3 +17,5 @@ const collectStories = (stories) => {
 }
 
 const titles = collectStories(stories);
+
+module.exports = titles;
