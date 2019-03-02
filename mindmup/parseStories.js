@@ -17,5 +17,5 @@ const collectStories = (stories) => {
 }
 
 const titles = collectStories(stories);
-
+console.log(titles);
 module.exports = titles;
