@@ -10,10 +10,8 @@ const writeFile = (fileHandle, text) => {
   });
 };
 
-writeFile('suckIt.js', 'sorry about that');
-
 const readFile = (fileHandle, callback) => {
-  fs.readFile(dosisModsFileHandle, { encoding: 'utf-8' }, (err, data) => {
+  fs.readFile(fileHandle, { encoding: 'utf-8' }, (err, data) => {
     if (err) {
       throw new Error(err);
     }
