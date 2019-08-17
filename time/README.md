@@ -30,7 +30,7 @@ const hhmmToSeconds= (hhmm) => {
 }
 ```
 
-covert seconds to hh:mm or hh:mm:ss timestamp
+covert seconds since midnight to hh:mm or hh:mm:ss timestamp
 ``` js
 const secondsToHHMM = (seconds) => {
   const hours = Math.floor(seconds / 3600);
