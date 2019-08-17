@@ -30,14 +30,23 @@ const hhmmToSeconds= (hhmm) => {
 }
 ```
 
-covert seconds to hh:mm timestamp
+covert seconds to hh:mm or hh:mm:ss timestamp
 ``` js
 const secondsToHHMM = (seconds) => {
   const hours = Math.floor(seconds / 3600);
   seconds = seconds % 3600;
   let minutes = Math.floor(seconds / 60);
-  minutes = minutes === 0 ? '00' : minutes
   minutes = (minutes + '').length < 2 ? '0' + minutes : minutes;
   return `${hours}:${minutes}`;
+}
+
+const secondsToHHMMSS = (seconds) => {
+  const hours = Math.floor(seconds / 3600);
+  seconds = seconds % 3600;
+  let minutes = Math.floor(seconds / 60);
+  seconds = Math.floor(seconds % 60);
+  minutes = (minutes + '').length < 2 ? '0' + minutes : minutes;
+  seconds = (seconds + '').length < 2 ? '0' + seconds : seconds;
+  return `${hours}:${minutes}:${seconds}`;
 }
 ```
