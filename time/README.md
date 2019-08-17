@@ -50,3 +50,17 @@ const secondsToHHMMSS = (seconds) => {
   return `${hours}:${minutes}:${seconds}`;
 }
 ```
+
+
+get seconds since midnight
+``` js
+    const secondsSinceMidnight = () => {
+        const now = new Date();
+        const then = new Date(
+            now.getFullYear(),
+            now.getMonth(),
+            now.getDate(), 0, 0, 0); 
+
+        return (now.getTime() - then.getTime()) / 1000;
+    }
+```
