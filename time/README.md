@@ -64,3 +64,19 @@ get seconds since midnight
         return (now.getTime() - then.getTime()) / 1000;
     }
 ```
+
+add hours to a time string
+``` js
+const addHours = (additionalHours) => (timeStr) => {
+  const splitTimeStr = timeStr.split(':');
+  let hours = Number(splitTimeStr[0]);
+  const minutes = splitTimeStr[1];
+  const seconds = splitTimeStr[2];
+  hours = hours + additionalHours;
+  hours = hours > 23 ? hours - 24 : hours;
+  hours = (hours + '').length < 2 ? '0' + hours : hours;
+
+  let resultStr =`${hours}:${minutes}`;
+  return seconds ? resultStr + `:${seconds}` : resultStr;
+};
+```
