@@ -79,8 +79,9 @@ const addHours = (additionalHours) => (timeStr) => {
   let hours = Number(splitTimeStr[0]);
   const minutes = splitTimeStr[1];
   const seconds = splitTimeStr[2];
-  hours = hours + additionalHours;
+  hours += additionalHours;
   hours = hours > 23 ? hours - 24 : hours;
+  hours = hours < 0 ? hours + 24 : hours;
   hours = (hours + '').length < 2 ? '0' + hours : hours;
 
   let resultStr =`${hours}:${minutes}`;
