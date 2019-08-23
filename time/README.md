@@ -22,7 +22,7 @@ export const militaryToAmPm = (timeStr) => {
 };
 ```
 
-convert a time string like "2:00" to minutes
+convert a time string like "2:00" to seconds 
 ``` js
 const hhmmToSeconds= (hhmm) => {
   const a = hhmm.split(':');
@@ -51,6 +51,13 @@ const secondsToHHMMSS = (seconds) => {
 }
 ```
 
+get time string for right now
+``` js
+const currentHHMMSS = () => {
+  const sm = secondsSinceMidnight();
+  return (secondsToHHMMSS(sm));
+}
+```
 
 get seconds since midnight
 ``` js
@@ -80,3 +87,5 @@ const addHours = (additionalHours) => (timeStr) => {
   return seconds ? resultStr + `:${seconds}` : resultStr;
 };
 ```
+
+
