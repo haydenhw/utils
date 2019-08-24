@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    console.log(req.body);
+  console.log(req.body);
 });
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
@@ -24,7 +24,7 @@ app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
 const axios = require('axios');
 // don't run this with nodemon
 axios.post('http://localhost:3000', {
-    firstName: 'Fred',
-    lastName: 'Flintstone'
-  });
+  firstName: 'Fred',
+  lastName: 'Flintstone'
+});
 
