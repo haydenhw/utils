@@ -89,4 +89,35 @@ const addHours = (additionalHours) => (timeStr) => {
 };
 ```
 
+run a command at given time (needs to be modified for use)
+``` js
+const at = (timeStr, callback, printDebugMsg) => {
+    const debugDivisor = 1;
+    const utc = pstToUTC(timeStr);
+    const split = utc.split(':').map(Number);
+    const hours = split[0];
+    const minutes = split[1];
+    const seconds = split[2] || 0;
 
+    const now = new Date();
+    const then = new Date(
+        now.getFullYear(),
+        now.getMonth(),
+        now.getDate(),
+        hours,
+        minutes,
+        seconds,
+        0
+    );
+
+    let milliSecsTillTime = (then - now) / debugDivisor;
+
+    if (milliSecsTillTime < 0) {
+        milliSecsTillTime += (24 * 60 * 60 / debugDivisor * 1000);
+    }
+
+    printDebugMsg(timeStr, milliSecsTillTime);
+
+    return setTimeout(callback, milliSecsTillTime);
+}
+```
