@@ -2,7 +2,7 @@
 
 Numbers:
 ```js
-const isNumber = val => typeof val === 'number';
+const isNumber = n => !isNaN(parseFloat(n)) && isFinite(n);
 ```
 Strings:
 ```js
