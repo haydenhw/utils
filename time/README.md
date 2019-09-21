@@ -1,3 +1,27 @@
+get time between function calls
+``` js
+const timeDiff = () => {
+    return {
+        evenMsg: false,
+        lastMsgTime: Date.now(),
+        measure() {
+            if (!this.evenMsg) {
+                console.log(this.evenMsg);
+                this.lastMsgTime = Date.now();
+                this.evenMsg = true;
+            } else {
+                const timeDiff = Date.now() - this.lastMsgTime;
+                console.log({timeDiff});
+                this.evenMsg = false;
+            }
+        }
+    }
+};
+const printDiff = timeDiff();
+printDiff.measure();
+``` 
+
+
 convert military to AmPm
 ``` js
 export const militaryToAmPm = (timeStr) => {
