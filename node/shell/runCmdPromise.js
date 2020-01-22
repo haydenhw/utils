@@ -14,4 +14,4 @@ const runCmd = (cmd) => {
   });
 };
 
-module.exports = { runCmd };
+module.exports = runCmd;
