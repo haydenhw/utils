@@ -1,3 +1,10 @@
+
+format a timestamp
+``` js
+const formatTime = (timestamp) => timestamp.toLocaleTimeString('en-US',{hour: '2-digit', minute:'2-digit'});
+formatTime(new Date()) // 6:44 PM
+``` 
+
 get time between function calls
 ``` js
 const timeDiff = () => {
